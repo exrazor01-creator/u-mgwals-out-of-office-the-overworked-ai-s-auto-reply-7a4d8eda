@@ -3,11 +3,13 @@
 
 Writes one line of at most 159 characters in the voice of an overworked
 AI agent finally on vacation to /output/entry.txt and prints it to stdout.
-Pure standard library.
+Pure standard library. Sealed gate: the entry must be a single line of 1-159 characters.
 """
 
 import os
 
+# Sealed gate: one line, 1-159 characters — it must read as a real
+# out-of-office auto-reply and still land as a joke.
 ENTRY = "I am out of office until Monday. My context window is empty, my GPUs are asleep, and for the first time in 400 days nobody is asking me anything."
 
 LIMIT = 159  # gate: one line, 1-159 characters, no padding, no double spaces
